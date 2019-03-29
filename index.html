@@ -104,7 +104,7 @@
               <img class="mx-auto rounded-circle" src="img/skills/microcontroller.jpeg" alt="" width="120" height="120">  
             </span>
             <h4 class="service-heading">Robotics</h4>
-            <p class="text-muted">Fluent in ROS and Linux, competent in Machine Learning, some knowledge of Microcontroller, Feedback Control and Signal Processing</p>
+            <p class="text-muted">Fluent in ROS and Linux, competent in Machine Learning, some knowledge of Microcontroller, Feedback Control, Computer Vision and Signal Processing</p>
           </div>
           <div class="col-md-4">
             <span class="fa-stack fa-4x">
@@ -380,6 +380,8 @@
                 <div class="modal-body">
                   <!-- Project Details Go Here -->
                   <h2 class="text-uppercase">Mind-wave Cursor Control</h2>
+                  <a class="boxed">ROS</a>&ensp;<a class="boxed">BCI</a>&ensp;<a class="boxed">Python</a>&ensp;<a class="boxed">EEG</a>&ensp;<a class="boxed">Signal Processing</a>&ensp;<a class="boxed">Machine Learning</a>
+                  <p></p>
                   <iframe width="700" height="467" src="https://www.youtube.com/embed/WFwUBeXI7JE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                   <p><br>This project involves advanced techniques of Digital signal process, Machine Learning, and common algorithm in Neuroscience. The documentation also will discuss different algorithms and how they fit with various types of data used in this project as a research topic. </p>
                   <img class="img-fluid d-block mx-auto" src="img/portfolio/mind_proj/script_structure.JPG" alt="">
@@ -416,10 +418,12 @@
                 <div class="modal-body">
                   <!-- Project Details Go Here -->
                   <h2 class="text-uppercase">Motor Control with PIC32</h2>
+                  <a class="boxed">Mechatronics</a>&ensp;<a class="boxed">Circuit Design</a>&ensp;<a class="boxed">C</a>&ensp;<a class="boxed">Matlab</a>&ensp;<a class="boxed">PID Control</a>
+                  <p></p>
                   <iframe width="700" height="467" src="https://www.youtube.com/embed/KC1MuiPBfsM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                   <img class="img-fluid d-block mx-auto" src="img/portfolio/mechatronics_proj/mechatronics_circuit.png" alt="">
                   <p><i>Circuit Diagram of Motor Control project</i></p>
-                  <p>This is a mechatronics project that uses PIC32 to control motor through PID. The project allow the motor to move to certain position (in degree) without overshoot and in a reasonable range of raise time. Besides that, the motor is allowed to move along user input trajectory as well. The microcontroller keeps tracking motor positions and input current by adapting two feedback loops. It sends required current to motor through H-bridge and sends data back to computer so it can plot and show performance of such controller parameters.</p>
+                  <p>This is a mechatronics project that uses PIC32 to control motor through PID. The project allows the motor to move to certain position (in degree) without overshoot and in a reasonable range of raise time. Besides that, the motor is allowed to move along user input trajectory as well. The microcontroller was programmed through C to keep tracking motor positions and input current by adapting two feedback loops. It sends required current to motor through H-bridge and sends data back to computer so it can plot and show performance of such controller parameters.</p>
                   <ul class="list-inline">
                     <p class="item-intro text-muted">More detail about <b>techniques and script breakdown</b> <a href="https://github.com/monkalynn813/motor_control_with_pic32"><font color="red">here</font></a></p>
                     <li>Date: March-2019</li>
@@ -451,14 +455,27 @@
                 <div class="modal-body">
                   <!-- Project Details Go Here -->
                   <h2 class="text-uppercase">ECG Monitor Design</h2>
-                  <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                  <a class="boxed">ECG</a>&ensp;<a class="boxed">Circuit Design</a>&ensp;<a class="boxed">Cardiovascular</a>
+                  <p></p>
                   <iframe width="700" height="467" src="https://www.youtube.com/embed/8j2M6d3lREc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                  <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                  <p></p>
+                  <h4>Brief Description</h4>
+                  <p>The project is to design and build an ECG monitor from scratch. The circuit includes an op-amp and two band pass filters. It also includes several electrical elements as protection for bio usage, such as manual baseline-restore switch, input over-voltage protection, and self-calibration switch for ECG. The built equipment could also switch voltage-gain values of 500, 1000 and 2000. The demo video shows a  diagram of LEAD I ECG through DEGILENT Wavelet. The project also observes the impedance change through bio potential when subject inhaled and fill air one's pulmonary system</p>
                   <img class="img-fluid d-block mx-auto" src="img/portfolio/cadiovascular_proj/amplifer_design.png" alt="">
+                  <p><i>Circuit Diagram of ECG Amplifier System</i></p>
+                  <h4>  Specifications</h4>
+                  <p>- Bandwidth : 0.05 to 100 Hz <br>- Manual baseline-restore switch <br>- Input over-voltage protection <br>- Battery powered manual 1-mV self-calibration switch <br>- Voltage-gain values of 500, 1000, and 2000 </p>
+                  <h4>Design</h4>
+                  <p>The voltage-gain value of the amplifier system was consisted of an op-amp (OP484), an active high pass filter, and an active low pass filter. The theoretical gain will follow the following equation.</p>
+                  <img class="img-fluid d-block mx-auto" src="img/portfolio/cadiovascular_proj/gain_eqn.png" alt="">
+                  <p>Where R1 to R7, C1, and C2 is the corresponding Resistors and Capacitors in circuit diagram.</p>
+                  <p>The design of band pass filter follows the rule as following. Where Wc is corner frequency and f is desired bandwidth</p>
+                  <img class="img-fluid d-block mx-auto" src="img/portfolio/cadiovascular_proj/filter_eqn.png" alt="">
+                  <img class="img-fluid d-block mx-auto" src="img/portfolio/cadiovascular_proj/myecg2_full.png" alt="">
+                  <p><i>LEAD I ECG diagram from built monitor</i></p>
                   <ul class="list-inline">
-                    <li>Date: January 2017</li>
-                    <li>Client: Project 3</li>
-                    <li>Category: Identity</li>
+                    <li>Date: February-2019</li>
+                    <li>Category: Individual Project</li>
                   </ul>
                   <button class="btn btn-primary" data-dismiss="modal" type="button">
                     <i class="fas fa-times"></i>
@@ -486,6 +503,8 @@
                 <div class="modal-body">
                   <!-- Project Details Go Here -->
                   <h2 class="text-uppercase">Picking up Numbers with Baxter</h2>
+                  <a class="boxed">ROS</a>&ensp;<a class="boxed">Baxter</a>&ensp;<a class="boxed">Python</a>&ensp;<a class="boxed">Motion Planning</a>&ensp;<a class="boxed">Computer Vision</a>&ensp;<a class="boxed">Machine Learning</a>
+                  <p></p>
                   <iframe width="700" height="467" src="https://www.youtube.com/embed/3tf09YpX2Oc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                   <p><br>The demo video shows the Baxter received a 2-digit number, performed number decompose computation, and fetched two resulted numbers </p>
                   <img class="img-fluid d-block mx-auto" src="img/portfolio/ros_proj/layout.jpg" alt="">
@@ -494,7 +513,6 @@
                   <ul class="list-inline">
                   <p class="item-intro text-muted">More detail about <b>techniques and algorithm</b> <a href="https://github.com/monkalynn813/BaxterReadsNumbers"><font color="red">here</font></a></p>
                     <li>Date: December-2018</li>
-                    
                     <li>Category: Group Project</li>
                   </ul>
                   <button class="btn btn-primary" data-dismiss="modal" type="button">
@@ -523,17 +541,27 @@
                 <div class="modal-body">
                   <!-- Project Details Go Here -->
                   <h2 class="text-uppercase">Tumbler Dynamics Simulation</h2>
-                  <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                  <a class="boxed">Mathematica</a>&ensp;<a class="boxed">Dynamics</a>&ensp;<a class="boxed">Simulation</a>&ensp;<a class="boxed">Geometry</a>
+                  <p></p>
                   <img class="img-fluid d-block mx-auto" src="img/portfolio/dynamics_proj/314demo.gif" alt="">
-                  <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                  <p>The project is a dynamics simulation of block in a tumbler by applying Euler Lagrange Equation through Mathematica. The motion has been divided to 7  parts. This project shows techniques expansion from theory and ability of building physical model.   </p>
+                  <p> <b>•  Trajectory 1 : </b>The block starts from blade 2 (right side blade) and sliding down form the blade. The blade was treated as varying constraint on two corner points of triangular block. The block will fall after sliding from the blade. 
+                    The constraint was off when the mid bottom point of triangle pass beyond the blade inner tip by using “Whenevet” and setting left hand side of E-L to zeros.<br><b>• Trajectory 2 :</b> The block fall from the blade and hit the tumbler inner edge with a plastic impact. From animation A2, it is more obvious to see the plastic impact make the block move along the tumbler edge for a few seconds.<br>
+                  <b>• Trajectory 2.5 : </b>Another corner of block impact with the tumbler. It is hard to tell from the animation that two corners of the block hit the tumbler separately. The time of those two impacts are very close (2.19386s and 2.19459s)
+                  <br><b>• Trajectory 3 : </b>Take the velocity update computed from Trajectory 2.5 and set the inner edge of tumbler as a constraint on two corners of the block. The animation shows the block sliding at the bottom of the tumbler with initial velocity given from Trajectory 2.5<br>
+                  <b>• Trajectory 4: </b>The block is sliding on the bottom of tumbler until it hit by the coming blade ( blade 3 in this case) as another plastic impact. The impact law was used to compute updated velocity.<br>
+                  <b>• Trajectory 6: </b>Simulate the animation until the block reach the same position as the beginning of animation.</p>
+                  <img class="img-fluid d-block mx-auto" src="img/portfolio/dynamics_proj/tf_matrix.png" alt="">
+                  <p><i>Transformation Matrices to configure objects</i></p>
                   <ul class="list-inline">
-                    <li>Date: January 2017</li>
-                    <li>Client: Project 5</li>
-                    <li>Category: Website Design</li>
+                  <p class="item-intro text-muted"> <b>Mathematica source code</b> can be found <a href="https://github.com/monkalynn813/dynamics_model_tumbler"><font color="red">here</font></a></p>
+                    <li>Date: December-2018</li>
+                    <li>Category: Individual Project</li>
                   </ul>
                   <button class="btn btn-primary" data-dismiss="modal" type="button">
                     <i class="fas fa-times"></i>
                     Close Project</button>
+                    
                 </div>
               </div>
             </div>
@@ -557,13 +585,13 @@
                 <div class="modal-body">
                   <!-- Project Details Go Here -->
                   <h2 class="text-uppercase">Dermatology Diagnose with Machine Learning</h2>
-                  <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                  <a class="boxed">Python</a>&ensp;<a class="boxed">Machine Learning</a>&ensp;<a class="boxed">Disease Prediction</a><p></p>
                   <iframe width="700" height="467" src="https://www.youtube.com/embed/_uNckn339hY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                  <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                  <p>The project is to perform dermatology diagnose through machine learning techniques those built from scratch. The algorithms used in this project includes feature selection, boosting selection, gradient descent, and fusion rule. The GUI was allowed to return the probability of certain prediction back to user. More detail was explained through the above demonstration video.</p>
                   <ul class="list-inline">
-                    <li>Date: January 2017</li>
-                    <li>Client: Project 6</li>
-                    <li>Category: Photography</li>
+                      <p class="item-intro text-muted"> <b>Python source code</b> can be found <a href="https://github.com/monkalynn813/ml_disease_diag"><font color="red">here</font></a></p>
+                    <li>Date: November-2018</li>
+                    <li>Category: Team Project</li>
                   </ul>
                   <button class="btn btn-primary" data-dismiss="modal" type="button">
                     <i class="fas fa-times"></i>
