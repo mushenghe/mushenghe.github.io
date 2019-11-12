@@ -91,3 +91,12 @@
     margin: 0 0 30px;
   }
 }
+
+iframe {
+  max-width: 100%;
+}
+
+embed {
+  max-width: 100%;
+  height: auto;
+}
