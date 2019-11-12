@@ -66,7 +66,7 @@
     </header>
 
     <!-- Technical Skills -->
-    <section class="bg-light" id="TechnicalSkills">
+    <section  id="TechnicalSkills">
         <div class="container">
           <div class="row">
             <div class="col-lg-12 text-center">
@@ -237,21 +237,6 @@
         <div class="row">
 
             <div class="col-md-4 col-sm-6 ongoing-item">
-                <a class="ongoing-link" data-toggle="modal" href="#portfolio_stroke">
-                  <div class="ongoing-hover">
-                    <div class="ongoing-hover-content">
-                      <i class="fas fa-plus fa-3x"></i>
-                    </div>
-                  </div>
-                  <img class="img-fluid" src="img/portfolio/stroke_proj/pilot.jpg" alt="" width="400" height="300">
-                </a>
-                <div class="ongoing-caption">
-                  <h4>Performance Assessment for Kids with Stroke </h4>
-                  <p class="text-muted"> HCI | Interfacing | Biosensor</p>
-                </div>
-              </div>
-    
-              <div class="col-md-4 col-sm-6 ongoing-item">
                 <a class="ongoing-link" data-toggle="modal" href="#portfolio_haptic">
                   <div class="ongoing-hover">
                     <div class="ongoing-hover-content">
@@ -266,12 +251,29 @@
                 </div>
               </div>
 
+            <div class="col-md-4 col-sm-6 ongoing-item">
+                <a class="ongoing-link" data-toggle="modal" href="#portfolio_stroke">
+                  <div class="ongoing-hover">
+                    <div class="ongoing-hover-content">
+                      <i class="fas fa-plus fa-3x"></i>
+                    </div>
+                  </div>
+                  <img class="img-fluid" src="img/portfolio/stroke_proj/pilot.jpg" alt="" width="400" height="300">
+                </a>
+                <div class="ongoing-caption">
+                  <h4>Performance Assessment for Kids with Stroke </h4>
+                  <p class="text-muted"> HCI | Interfacing | Biosensor</p>
+                </div>
+              </div>
+    
+
+
             </div>
           </div>
         </section>  
     
     <!-- contact -->
-    <section id="team">
+    <section class="bg-light" id="team">
       <div class="container">
         <div class="row">
             <div class="col-lg-12 max-auto mb-5">
@@ -378,13 +380,21 @@
                   <div class="modal-body">
                     <!-- Project Details Go Here -->
                     <h2 class="text-uppercase">Haptic Feedback Simulates Active Whisking of Rats (Ongoing Project) </h2>
-                    <a class="boxed">ROS</a>&ensp;<a class="boxed">BCI</a>&ensp;<a class="boxed">Python</a>&ensp;<a class="boxed">EEG</a>&ensp;<a class="boxed">Signal Processing</a>&ensp;<a class="boxed">Machine Learning</a>
+                    <a class="boxed">Mechatronics</a>&ensp;<a class="boxed">HCI</a>&ensp;<a class="boxed">Interfacing</a>&ensp;<a class="boxed">Signal Processing</a>&ensp;
                     <p></p>
+                    <p>The goal of this project is to develop a feedback device that can simulate the whisking of the robotic rat in real-time. The robotic rat can send the digital voltage signals to an MCU with sensed bending in pitch and yaw. Based on the geometry of the feedback device, we project such signals into three axes. Multiple vibration motors are used in the system to represent the direction of bending. We use PWM to control the frequency of motos to describe the magnitude of the bending.</p>
                     <!-- <iframe width="700" height="467" src="https://www.youtube.com/embed/WFwUBeXI7JE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     <p><br>This project involves advanced techniques of Digital signal process, Machine Learning, and common algorithm in Neuroscience. The documentation also will discuss different algorithms and how they fit with various types of data used in this project as a research topic. </p>
-                    <img class="img-fluid d-block mx-auto" src="img/portfolio/mind_proj/script_structure.JPG" alt="">
-                    <p><i>Block diagram of ROS nodes in Mind-wave cursor control system</i></p> -->
-                    <p>Under Construction</p>
+                    -->
+                    <h4>Method and Current Status</h4>
+                    <img class="img-fluid d-block mx-auto" src="img/portfolio/haptic_proj/me_design.png" alt="">
+                    <p><i>Current Mechanical Design of the Haptic Feedback Device</i></p> 
+                    <p>We use six micro vibration motors to form a ring-shaped device. Each two of them are activated to describe one direction since they provide contrast to enhance the actual feeling from the human. The frequency of vibration is controlled through PWM from 100Hz (50%) to 200Hz (100%). </p>
+                    <img class="img-fluid d-block mx-auto" src="img/portfolio/haptic_proj/motor_control.png" alt="">
+                    <p><i>Current Software Interface of the Haptic Feedback Device</i></p> 
+                    <p>The micro-controller takes input of the signal as a format of (x,y). It computes which two motors are required to describe the direcation and duty cycle, respectively. </p>
+                    <img class="img-fluid d-block mx-auto" src="img/portfolio/haptic_proj/math.png" alt="">
+                    <p><i>Projection based on the Geometric of the Haptic Feedback Device</i></p> 
                     <ul class="list-inline">
                     <!-- <p class="item-intro text-muted">More detail about  <a class="boxed" href="https://github.com/monkalynn813/Mindwave_controlling_cursor"><font color="red"><b>Techniques and Algorithm</b> here</font></a></p> -->
                       <li>Date: November 2019</li>
