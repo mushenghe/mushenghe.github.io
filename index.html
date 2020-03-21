@@ -38,7 +38,7 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav text-uppercase ml-auto">
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#portfolio">Portfolio</a>
+              <a class="nav-link js-scroll-trigger" href="#portfolio">Projects</a>
             </li>
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#TechnicalSkills">Skills</a>
@@ -67,7 +67,7 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-12 text-center">
-            <h2 class="section-heading text-uppercase">Portfolio</h2>
+            <h2 class="section-heading text-uppercase">Projects</h2>
             <h3 class="section-subheading text-muted">September 2019 ~ Now</h3>
           </div>
         </div>
@@ -95,11 +95,11 @@
                     <i class="fas fa-plus fa-3x"></i>
                   </div>
                 </div>
-                <img class="img-fluid" src="img/portfolio/eeme_proj/ucbproject.gif" alt="" width="400" height="300">
+                <img class="img-fluid" src="img/portfolio/eeme_proj/healer.gif" alt="" width="400" height="300">
               </a>
               <div class="portfolio-caption">
-                <h4>Doctor Sawyer</h4>
-                <p class="text-muted">ROS | CV | Motion Planning<br>Sawyer Robot measure the patient’s heartbeat and body temperature suspect tumors by pressing on an area of the patient with their hands</p>
+                <h4>Healer Baxter</h4>
+                <p class="text-muted">Deep Learning | CV | Motion Planning<br>Baxter Robot play the piano based on detected human emotion</p>
               </div>
             </div>
 
@@ -385,25 +385,74 @@
                 <div class="col-lg-8 mx-auto">
                   <div class="modal-body">
                     <!-- Project Details Go Here -->
-                    <h3 class="text-uppercase">Doctor Sawyer</h3>
-                    <a class="boxed">ROS</a>&ensp;<a class="boxed">Baxter</a>&ensp;<a class="boxed">Python</a>&ensp;<a class="boxed">Computer Vision</a>&ensp;<a class="boxed">Motion Planning</a>
+                    <h3 class="text-uppercase">Healer Baxter</h3>
+                    <a class="boxed">Deep Learning</a>&ensp;<a class="boxed">Tensorflowr</a>&ensp;<a class="boxed">Python</a>&ensp;<a class="boxed">Computer Vision</a>&ensp;<a class="boxed">Motion Planning</a>
                     <p></p>
                     <h4>Brief Description</h4>       
-                  	<p>This is the final project of course EECS 106A Introduction to Robotics at University of California, Berkeley. The goal of this project is to enable Sawyer Robot measure the patient’s heartbeat and body temperature, and suspect tumors by pressing on an area of the patient with their hands</p>
-                  	<a class="boxed" href="https://doctorsawyer.wordpress.com/"><font color="red"><b>Project Website</font></a>
+                  	<p>This project aims to use deep learning and manipulation platform to train a two-armed robot to play the piano based on the human emotion.</p>
+                  	<p></p>
+                    <h4>Motivation</h4>       
+                  	<p>We live in an era in which communication seems simpler than any times, a friend is only one text away or one video chat away. Although communication may be easier and faster, people still feel lonely and depression rates have largely increased. Inspired by this circumstance, this project is to design a system that would enable the Baxter Robot to detect the negative emotion of its master and play songs on the piano using both hands to help him/her get rid of the bad feelings.</p>
                     <p></p>
-                  	<h5>Tumor Detection Demo</h5> 
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/36wQsw1g3C4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    <h5>Temperature and Pulse Sensing demo</h5> 
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/cPpt2KJj4w4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    <h5>Safety Demo</h5> 
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/XQa2Uvfiuuw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <h4>Emotion Detection</h4>
+                    <h5>1. Data Pre-processing</h5> 
+                    <p>The datasets are composed of 35887
+                      training and testing samples. The training
+                      samples are then divided into two sets namely;
+                      Training Set and Validation Set. Training set
+                      samples composed of 80% of the original dataset
+                      samples and 20% of the samples are specified for
+                      validation. Hence Training Set and Validation Set
+                      will be 22966 and 5741 respectively.
+                      Preprocessing is performed to prepare images for
+                      the feature extraction stage. A set of facial feature
+                      points is extracted from the images then facial
+                      features derived from these points. Different sets
+                      of facial features are used for both training and
+                      validation classifiers.</p>
+                    <img class="img-fluid d-block mx-auto" src="img/portfolio/eeme_proj/data.png" alt="">
+                    <p></p>
+                    <h5>2. Data Augmentationg</h5> 
+                    <p>In order to avoid overfitting and improve
+                      recognition accuracy I applied data
+                      augmentation techniques on each training samples. For each image I performed
+                      following transforms:
+                      a. Rescale (1. / 255)
+                      B. Rotation (30)
+                      b. Shear (0.3)
+                      c. Zoom (0.3)
+                      d. shift(width:0.4,height:0.4)
+                      e. Flip (horizontal)</p>
+                    <p></p>
+                    <h5>3. Proposed CNN Model</h5>       
+                  	<p>The CNN Model I built takes the input grayscale image size of 48*48 pixels. This model architecture is composed of 5 layers. These layers
+                      contains 5 convolutional layers and 5 max pooling layers along with 2 fully connected layer and the output layer. The
+                      output layer consists of 5 neurons corresponding to 5
+                      emotional labels: Angry, Happy, Neutral, Sad and Surprise. This model uses Rectified Linear Unit (relu) as most precisely used
+                      activation function which is applied on all the Convolution
+                      Layer and Dense Layer except the last layer (output layer)
+                      which is actually Softmax Function. Dropout Layer is also
+                      applied after each Convolution, Max Pooling and Dense
+                      Layer with the rate of 0.25</p>
+                    <p></p>
+                    <img class="img-fluid d-block mx-auto" src="img/portfolio/eeme_proj/CNN_ARC.png" alt="">
+                    <p></p>
+                  	<h5>Emotion Detection Demo</h5> 
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/s_xAZkpSfBo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <h4>Piano Playing</h4>
+                    <p>The detected emotion would be written in a text file using basic pyhton I/O function. The piano playing node keep reading this text file and when the emotion "sad" is detected and written in the file, baxter would start playing the piano</p>
+                    <h5>Locate keys using AprilTags</h5> 
+                    <p>Use pose infomation of the two apriltags in left_arm frame to compute the poses of keys in the baxter base frame</p>
+                    <img class="img-fluid d-block mx-auto" src="img/portfolio/eeme_proj/piano.png" alt="">
+                    <h5>Piano Playing Demo</h5> 
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/lJ78-UlrxD4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     <ul class="list-inline">
-                    <p><a class="boxed" href="https://github.com/mushenghe/ee106a-project"><font color="red"><b>Github Page</b> </font></a></p>
+                    <p><a class="boxed" href="https://github.com/mushenghe/HealerBaxter"><font color="red"><b>Github Page</b> </font></a></p>
                     </ul>
                     <button class="btn btn-primary" data-dismiss="modal" type="button">
                       <i class="fas fa-times"></i>
                       Close Project</button>
+                      
                   </div>
                 </div>
               </div>
