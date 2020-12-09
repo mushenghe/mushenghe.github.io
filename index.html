@@ -73,8 +73,38 @@
         </div>
         <div class="row">
 
+         <div class="col-md-4 col-sm-6 portfolio-item">
+            <a class="portfolio-link" data-toggle="modal" href="#musclesynergy">
+              <div class="portfolio-hover">
+                <div class="portfolio-hover-content">
+                  <i class="fas fa-plus fa-3x"></i>
+                </div>
+              </div>
+              <img class="img-fluid" src="img/portfolio/muscle_proj/task.gif" alt="" width="400" height="300">
+            </a>
+            <div class="portfolio-caption">
+              <h4>Muscle Synergy Identification</h4>
+              <p class="text-muted">Unsupervised Learning | Biomedical Science<br>Using Nonnegative Matrix Factorization to Identify Muscle Synergies During a Multi-Joint Task</p>
+            </div>
+          </div>
+
           <div class="col-md-4 col-sm-6 portfolio-item">
-            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal1">
+            <a class="portfolio-link" data-toggle="modal" href="#healerbaxter">
+              <div class="portfolio-hover">
+                <div class="portfolio-hover-content">
+                  <i class="fas fa-plus fa-3x"></i>
+                </div>
+              </div>
+              <img class="img-fluid" src="img/portfolio/healer_baxter/healer.gif" alt="" width="400" height="300">
+            </a>
+            <div class="portfolio-caption">
+              <h4>Healer Baxter</h4>
+              <p class="text-muted">Deep Learning | CV | Motion Planning<br>Baxter Robot play the piano based on detected human emotion</p>
+            </div>
+          </div>
+
+          <div class="col-md-4 col-sm-6 portfolio-item">
+            <a class="portfolio-link" data-toggle="modal" href="#terminator">
               <div class="portfolio-hover">
                 <div class="portfolio-hover-content">
                   <i class="fas fa-plus fa-3x"></i>
@@ -86,25 +116,10 @@
               <h4>Terminator</h4>
               <p class="text-muted">ROS | CV | Motion Planning<br>Baxter Robot pick up a nerf gun, locate a cup, pull the nerf gun trigger to shoot the cup when given a user input, and move to a final pose</p>
             </div>
-          </div>
-
-          <div class="col-md-4 col-sm-6 portfolio-item">
-              <a class="portfolio-link" data-toggle="modal" href="#portfolio_eeme">
-                <div class="portfolio-hover">
-                  <div class="portfolio-hover-content">
-                    <i class="fas fa-plus fa-3x"></i>
-                  </div>
-                </div>
-                <img class="img-fluid" src="img/portfolio/healer_baxter/healer.gif" alt="" width="400" height="300">
-              </a>
-              <div class="portfolio-caption">
-                <h4>Healer Baxter</h4>
-                <p class="text-muted">Deep Learning | CV | Motion Planning<br>Baxter Robot play the piano based on detected human emotion</p>
-              </div>
-            </div>
+        </div>
 
             <div class="col-md-4 col-sm-6 portfolio-item">
-                <a class="portfolio-link" data-toggle="modal" href="#portfolioModal3">
+                <a class="portfolio-link" data-toggle="modal" href="#kuka">
                   <div class="portfolio-hover">
                     <div class="portfolio-hover-content">
                       <i class="fas fa-plus fa-3x"></i>
@@ -119,7 +134,7 @@
               </div>
 
           <div class="col-md-4 col-sm-6 portfolio-item">
-            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal2">
+            <a class="portfolio-link" data-toggle="modal" href="#pushinggrasping">
               <div class="portfolio-hover">
                 <div class="portfolio-hover-content">
                   <i class="fas fa-plus fa-3x"></i>
@@ -134,7 +149,7 @@
           </div>
 
           <div class="col-md-4 col-sm-6 portfolio-item">
-            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal4">
+            <a class="portfolio-link" data-toggle="modal" href="#panorama">
               <div class="portfolio-hover">
                 <div class="portfolio-hover-content">
                   <i class="fas fa-plus fa-3x"></i>
@@ -150,7 +165,7 @@
           </div>
 
           <div class="col-md-4 col-sm-6 portfolio-item">
-            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal5">
+            <a class="portfolio-link" data-toggle="modal" href="#dynamics">
               <div class="portfolio-hover">
                 <div class="portfolio-hover-content">
                   <i class="fas fa-plus fa-3x"></i>
@@ -277,8 +292,8 @@
 
     <!-- Portfolio Modals -->
 
-    <!-- Modal stroke -->
-    <div class="portfolio-modal modal fade" id="portfolio_stroke" tabindex="-1" role="dialog" aria-hidden="true">
+    <!-- Muscle Synergy Identification -->
+    <div class="portfolio-modal modal fade" id="musclesynergy" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="close-modal" data-dismiss="modal">
@@ -291,25 +306,43 @@
                 <div class="col-lg-8 mx-auto">
                   <div class="modal-body">
                     <!-- Project Details Go Here -->
-                    <h3 class="text-uppercase">A Mechatronic System to Study Proprioception (Ongoing Project) </h3>
-                    <a class="boxed">HCI</a>&ensp;<a class="boxed">Biosensor</a>&ensp;<a class="boxed">Python</a>&ensp;<a class="boxed">Interfacing</a>&ensp;<a class="boxed">Mechanical Design</a>&ensp;
+                    <h3 class="text-uppercase">Muscle Synergy Identification</h3>
+                    <a class="boxed">Unsupervised Learning</a>&ensp;<a class="boxed">Signal Processing</a>&ensp;<a class="boxed">Python</a>&ensp;<a class="boxed">Matlab</a>&ensp;
+                    <p></p><br>
+                    <h4>Brief Description</h4>
+                    <p></p>     
+                    <p>This project aims to use nonnegative matrix factorization algorithm to identify muscle synergies during a multi-joint task</p>
+                    <h4>Motivation</h4>                   
+                    <p>When doing multi-joint task involving lifting up the shoulder and bending the elbow, what really happened is that there are some movement-related signals coming from our brain,
+                        in specific coming from our cerebral cortex, and reaching the motor neuron at the spinal cord and traveling all way down through the axons and synapsing
+                        with the corresponding muscle fibers and finally creating the torque out. Instead of having to control dozens of muscles individually, the signals coming from our brain just control the activation
+                        of a much smaller number of muscle groups. This muscle synergies is part of a hierarchical control strategy. Thes synergies identify the relevant muscle groups that when activated together, allow for simplified control of particular biomechanical features of the limb.</p>
                     <p></p>
-                    <iframe width="700" height="467" src="https://www.youtube.com/embed/ntOk0ySuN0E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <h4>Experiment Setup</h4>
+                    <P></P>
+                    <h5>System Pipeline</h5>
+                    <img class="img-fluid d-block mx-auto" src="img/portfolio/muscle_proj/pipeline.png" alt="">
+                    <P></P>
+                    <h5>Participants and Conditions</h5>
+                    <P></P>
+                    <h6>Participants</h6>
+                    <!-- <img class="img-fluid d-block mx-auto" src="img/portfolio/muscle_proj/participants.png" alt=""> -->
+                    <img class="img-fluid" src="img/portfolio/muscle_proj/participants.png" alt="" width="2000" height="1000">
                     <p></p>
-                    <p><br>The objective of this project is to build a mechatronic system to study proprioception in young children. This system includes a mechanical design for the experimental setup, and software for acquiring sensor data and delivering automated audiovisual feedback. The targeted age of children is between 3 and 6 years old. The developed system provides visually attractive interfaces that adapt to the participant’s interactions. The experiment contains a test to quantify a participant’s maximum voluntary torque, as well as their perception. This system runs an automated experiment and records data for post-hoc analyses.
-                    </p>
-                    <h4>Motivation</h4>
+                    <h6>Conditions</h6>
+                    <img class="img-fluid" src="img/portfolio/muscle_proj/conditions.png" alt="" width="400" height="300">
+                    <h5>Isometric Task</h5>
+                    <img class="img-fluid" src="img/portfolio/muscle_proj/IMG_4475.jpg" alt="" width="400" height="300">
+                    <img class="img-fluid" src="img/portfolio/muscle_proj/IMG_4476.jpg" alt="" width="400" height="300">
+                    <h5>Experiment Procedure</h5>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/x7HlRIp5OJ0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     
-                    <p>Numerous studies have quantified proprioception in adults. However, less information is available about children. The goal of this project is to develop an experiment to permit proprioception to be quantified in children. The long-term goal of this project is to, using the system developed, understand the extent to which children who have neurological impairments also have proprioceptive deficits.</p>
-                    <p></p>
-                    <h4>Method</h4>
-                    <img class="img-fluid d-block mx-auto" src="img/portfolio/stroke_proj/expsetup.jpg" alt="">
                     <p><i>Experiment Setup</i></p>
                     <img class="img-fluid d-block mx-auto" src="img/portfolio/stroke_proj/visual_pipeline.png" alt="">
                     <p><i>The system acquires torque data indicating the extent to which the participant is flexing and extending about each elbow joint through two torque sensors. We used a DAQ card for data acquisition. A python script streams the sensory data at 1000Hz and passes signals to a callback function. The callback function utilizes the linear equation resulted from the [calibration](calibration/README.md) process to convert a voltage signal to the actual torque generated by the participant. A zeroing function can also be called to remove an offset in the voltage signal. The perceptual testing tasks use the results from the maximum voluntary torque test (maximum torque), as well as the real-time torque to determine the audiovisual feedback. The system renders the visual interface at 27Hz and records data at 1000Hz. </i></p>
                     
                     <ul class="list-inline">
-                    <p class="item-intro text-muted"> <a class="boxed" href="https://github.com/monkalynn813/children_ability_assessment_sys"><font color="red"><b>Current Status and Source code here</b></font></a></p>
+                    <p class="item-intro text-muted"> <a class="boxed" href="https://github.com/mushenghe/muscle_synergy_torque_accuracy"><font color="red"><b>Current Status and Source code here</b></font></a></p>
                       <li>Date: December 2019</li>
                      
                     </ul>
@@ -324,8 +357,8 @@
         </div>
       </div>
 
-    <!-- Modal electromechanical -->
-    <div class="portfolio-modal modal fade" id="portfolio_eeme" tabindex="-1" role="dialog" aria-hidden="true">
+    <!-- Healer Baxter -->
+    <div class="portfolio-modal modal fade" id="healerbaxter" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="close-modal" data-dismiss="modal">
@@ -339,7 +372,7 @@
                   <div class="modal-body">
                     <!-- Project Details Go Here -->
                     <h3 class="text-uppercase">Healer Baxter</h3>
-                    <a class="boxed">Deep Learning</a>&ensp;<a class="boxed">Tensorflowr</a>&ensp;<a class="boxed">Python</a>&ensp;<a class="boxed">Computer Vision</a>&ensp;<a class="boxed">Motion Planning</a>
+                    <a class="boxed">Deep Learning</a>&ensp;<a class="boxed">Tensorflow</a>&ensp;<a class="boxed">Python</a>&ensp;<a class="boxed">Computer Vision</a>&ensp;<a class="boxed">Motion Planning</a>
                     <p></p>
                     <h4>Brief Description</h4>       
                   	<p>This project aims to use deep learning and manipulation platform to train a two-armed robot to play the piano based on the human emotion.</p>
@@ -414,8 +447,8 @@
         </div>
       </div>
   
-    <!-- Modal mindwave -->
-    <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
+    <!-- Terminator -->
+    <div class="portfolio-modal modal fade" id="terminator" tabindex="-1" role="dialog" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="close-modal" data-dismiss="modal">
@@ -435,16 +468,16 @@
                   <p>The goal of this project is to enable Baxter Robot pick up a nerf gun, locate a cup, pull the nerf gun trigger to shoot the cup when given a user input, and move to a final pose. </p>
                   <h4>Action Sequence</h4> 
                   <p></p>
-                  <h5>Baxter goes through initial calibration and start up sequence. Arms are moved to an initial pose.</h5>
-                  <h5>Baxter finds the nerf gun using an AprilTag and its left arm camera</h5>
-                  <h5>Baxter moves its left arm to line up with the nerf gun and closes its gripper to pick up the gun</h5>
-                  <h5>Once Baxter has the gun, it uses its left arm camera to find a cup using darknet</h5>
-                  <h5>Baxter keeps moving its left arm until the cup is in the center of the image produced by the camera</h5>
-                  <h5>Baxter moves its right arm to put its grippers around the nerf gun trigger</h5>
-                  <h5>Baxter waits for a user input to confirm the firing of the gun</h5>
-                  <h5>Baxter keeps waiting until the user tells it to fire</h5>
-                  <h5>Baxter pulls the trigger using its right gripper</h5>
-                  <h5>Baxter moves to a final pose right after shooting</h5>
+                  <p>1. Baxter goes through initial calibration and start up sequence. Arms are moved to an initial pose. <br>
+                  2. Baxter finds the nerf gun using an AprilTag and its left arm camera<br>
+                  3. Baxter moves its left arm to line up with the nerf gun and closes its gripper to pick up the gun<br>
+                  4. Once Baxter has the gun, it uses its left arm camera to find a cup using darknet<br>
+                  5. Baxter keeps moving its left arm until the cup is in the center of the image produced by the camera<br>
+                  6. Baxter moves its right arm to put its grippers around the nerf gun trigger<br>
+                  7. Baxter waits for a user input to confirm the firing of the gun<br>
+                  8. Baxter keeps waiting until the user tells it to fire<br>
+                  9. Baxter pulls the trigger using its right gripper<br>
+                  10. Baxter moves to a final pose right after shooting<br></p>
                   <p></p>
                   <h4>Demo</h4>
                   <iframe width="560" height="315" src="https://www.youtube.com/embed/2MRsNefNWmw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -463,60 +496,9 @@
       </div>
     </div>
 
-    <!-- Modal 2 -->
-    <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="close-modal" data-dismiss="modal">
-            <div class="lr">
-              <div class="rl"></div>
-            </div>
-          </div>
-          <div class="container">
-            <div class="row">
-              <div class="col-lg-8 mx-auto">
-                <div class="modal-body">
-                  <!-- Project Details Go Here -->
-                  <h3 class="text-uppercase">Visual Pushing and Grasping</h3>
-                  <a class="boxed">Deep Reinforcement Learning</a>&ensp;<a class="boxed">Docker</a>&ensp;<a class="boxed">Pytorch</a>
-                  <p></p>
-                  <h4>Brief Description</h4> 
-                  <p>Most grasping algorithms today often fail to handle scenarios where objects are tightly packed together. They can attempt bad grasps repeatedly to no avail since they can only find accessible grasps. This project proposed to discover and learn synergies between pushing and grasping from experience through model-free deep reinforcement learning.</p>
-                  <h5>System Overview</h5> 
-                  <p></p>
-                  <p></p>
-                  <img class="img-fluid d-block mx-auto" src="img/portfolio/pushing_grasping/method.jpg" alt="">
-                  <p></p>
-                  <h5>Model Input & Output</h5>
-                  <p></p>
-                  <p>The Q-function is modeled as two feed-forward fully convolutional networks(FCNs) Φp and Φg. FCN Φp is for pushing motion primitive behavior and FCN Φg is for grasping.</p>
-                  <p></p>
-                  <p>For each individual FCN Φψ:</p>
-                  <p></p>
-                  <p>Input: the heightmap image representation of the current state</p>
-                  <p>Output: a dense pixel-wisemap of Q values with the same image size and resolution as that of the state</p>
-                  <p></p>
-                  <p>Note: each individual Q value prediction at a pixel p represents the future expected reward of executing primitive ψ at 3D location q where q→p ∈st.</p>  
-                  
-                  <p></p>
-                  <h5>Use the pretrained model</h5> 
-                  <iframe width="560" height="315" src="https://www.youtube.com/embed/i_fHtQ-zDkM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                  <ul class="list-inline">
-                  <p><a class="boxed" href="https://github.com/mushenghe/visual-pushing-grasping"><font color="red"><b>Github Page</font></a></p> 
-                  </ul>
-                  <button class="btn btn-primary" data-dismiss="modal" type="button">
-                    <i class="fas fa-times"></i>
-                    Close Project</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
 
-    <!-- Modal 3 -->
-    <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
+    <!-- KUKA Manipulation -->
+    <div class="portfolio-modal modal fade" id="kuka" tabindex="-1" role="dialog" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="close-modal" data-dismiss="modal">
@@ -550,8 +532,61 @@
       </div>
     </div>
 
-    <!-- Modal 4 -->
-    <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
+    <!-- Visual Pushing and Grasping -->
+    <div class="portfolio-modal modal fade" id="pushinggrasping" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                <div class="rl"></div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="modal-body">
+                    <!-- Project Details Go Here -->
+                    <h3 class="text-uppercase">Visual Pushing and Grasping</h3>
+                    <a class="boxed">Deep Reinforcement Learning</a>&ensp;<a class="boxed">Docker</a>&ensp;<a class="boxed">Pytorch</a>
+                    <p></p>
+                    <h4>Brief Description</h4> 
+                    <p>Most grasping algorithms today often fail to handle scenarios where objects are tightly packed together. They can attempt bad grasps repeatedly to no avail since they can only find accessible grasps. This project proposed to discover and learn synergies between pushing and grasping from experience through model-free deep reinforcement learning.</p>
+                    <h5>System Overview</h5> 
+                    <p></p>
+                    <p></p>
+                    <img class="img-fluid d-block mx-auto" src="img/portfolio/pushing_grasping/method.jpg" alt="">
+                    <p></p>
+                    <h5>Model Input & Output</h5>
+                    <p></p>
+                    <p>The Q-function is modeled as two feed-forward fully convolutional networks(FCNs) Φp and Φg. FCN Φp is for pushing motion primitive behavior and FCN Φg is for grasping.</p>
+                    <p></p>
+                    <p>For each individual FCN Φψ:</p>
+                    <p></p>
+                    <p>Input: the heightmap image representation of the current state</p>
+                    <p>Output: a dense pixel-wisemap of Q values with the same image size and resolution as that of the state</p>
+                    <p></p>
+                    <p>Note: each individual Q value prediction at a pixel p represents the future expected reward of executing primitive ψ at 3D location q where q→p ∈st.</p>  
+                    
+                    <p></p>
+                    <h5>Use the pretrained model</h5> 
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/i_fHtQ-zDkM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <ul class="list-inline">
+                    <p><a class="boxed" href="https://github.com/mushenghe/visual-pushing-grasping"><font color="red"><b>Github Page</font></a></p> 
+                    </ul>
+                    <button class="btn btn-primary" data-dismiss="modal" type="button">
+                        <i class="fas fa-times"></i>
+                        Close Project</button>
+                    </div>
+                </div>
+                </div>
+            </div>
+            </div>
+        </div>
+        </div>
+      
+
+    <!-- Panorama -->
+    <div class="portfolio-modal modal fade" id="panorama" tabindex="-1" role="dialog" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="close-modal" data-dismiss="modal">
@@ -608,8 +643,8 @@
       </div>
     </div>
 
-    <!-- Modal 5 -->
-    <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
+    <!-- Dynamics -->
+    <div class="portfolio-modal modal fade" id="dynamics" tabindex="-1" role="dialog" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="close-modal" data-dismiss="modal">
@@ -648,39 +683,7 @@
       </div>
     </div>
 
-    <!-- Modal 6 -->
-    <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="close-modal" data-dismiss="modal">
-            <div class="lr">
-              <div class="rl"></div>
-            </div>
-          </div>
-          <div class="container">
-            <div class="row">
-              <div class="col-lg-8 mx-auto">
-                <div class="modal-body">
-                  <!-- Project Details Go Here -->
-                  <h3 class="text-uppercase">Dermatology Diagnose with Machine Learning</h3>
-                  <a class="boxed">Python</a>&ensp;<a class="boxed">Machine Learning</a>&ensp;<a class="boxed">Disease Prediction</a><p></p>
-                  <iframe width="700" height="467" src="https://www.youtube.com/embed/_uNckn339hY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                  <p>The project is to perform dermatology diagnose through machine learning techniques those built from scratch. The algorithms used in this project includes feature selection, boosting selection, gradient descent, and fusion rule. The GUI was allowed to return the probability of certain prediction back to user. More detail was explained through the above demonstration video.</p>
-                  <ul class="list-inline">
-                      <p class="item-intro text-muted"> one can find <a class="boxed" href="https://github.com/monkalynn813/ml_disease_diag"><font color="red"><b>Python source code</b> here</font></a></p>
-                    <li>Date: November-2018</li>
-          
-                  </ul>
-                  <button class="btn btn-primary" data-dismiss="modal" type="button">
-                    <i class="fas fa-times"></i>
-                    Close Project</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+   
 
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
