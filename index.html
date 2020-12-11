@@ -311,105 +311,161 @@
                     <p></p><br>
                     <h4>Brief Description</h4>
                     <p></p>     
-                    <p>This project aims to use nonnegative matrix factorization algorithm to identify muscle synergies during a multi-joint task</p>
-                    <h4>Motivation</h4>                   
-                    <p>When doing multi-joint task involving lifting up the shoulder and bending the elbow, what really happened is that there are some movement-related signals coming from our brain,
-                        in specific coming from our cerebral cortex, and reaching the motor neuron at the spinal cord and traveling all way down through the axons and synapsing
-                        with the corresponding muscle fibers and finally creating the torque out. Instead of having to control dozens of muscles individually, the signals coming from our brain just control the activation
-                        of a much smaller number of muscle groups. This muscle synergies is part of a hierarchical control strategy. Thes synergies identify the relevant muscle groups that when activated together, allow for simplified control of particular biomechanical features of the limb.</p>
+                    <p>This project aims to identify how muscles are synergistically activated at the arm during a multi-joint task.
+                    </p>
+                    <h4>Motivation</h4>  
+                    <p></p>
+                    <img class="img-fluid" src="img/portfolio/muscle_proj/retrieve.gif" alt="" width="400" height="250">  
+                    <p>Figure 1</p>               
+                    <p>While seemingly simple, a motor task, such as retrieving an object from a high shelf, is very complicated. To achieve this task, movement-related signals 
+                        are generated from the motor cortex of our brain and relayed to muscle fibers via motor neurons. In turn, muscles contract and the arm is raised and extended. 
+                        There are more than 600 muscles in our body.  Instead of controlling each muscle individually, our brain is thought to recruit these muscles in set groups. 
+                        The activation of muscles in this grouped manner is termed muscle synergies and is part of a hierarchical control strategy. Activation of muscle synergies, 
+                        rather than individual muscles, allows for a simplified control of one’s limb. In this work, the focus is on muscle activation at the arm. Specifically, 
+                        the goal is to determine how muscles concurrently activate when an individual abducts at the shoulder and flexes at the elbow. As such, we can determine 
+                        normal muscle activation patterns in a population that is neurologically and orthopaedically intact.
+                    </p>
+                    <p></p>
+                    <h4>Hypothesis</h4>
+                    <p></p>
+                    <p>For a task involving abduction at the shoulder and flexion at the elbow, the main muscles involved are the biceps, triceps lateral, anterior deltoid, medial 
+                        deltoid, posterior deltoid, pectoralis major, lower trapezius, and middle trapezius.  Based on the muscle synergy hypothesis, we would expect to observe at 
+                        least two synergies for this task: one that is mainly responsible for the elbow flexion and one for shoulder abduction. 
+                    </p>
+                    <p></p>
+                    <img class="img-fluid" src="img/portfolio/muscle_proj/synergy.png" alt="" width="1000" height="500">
+                    <p>Figure 2</p>    
                     <p></p>
                     <h4>Experiment Setup</h4>
                     <P></P>
-                    <h5>System Pipeline</h5>
                     <img class="img-fluid d-block mx-auto" src="img/portfolio/muscle_proj/pipeline.png" alt="">
+                    <p>Figure 3</p>    
+                    <p></p>
+                    <p>The system pipeline is shown in Figure 3. The system acquires torque data from a six-degree-of-freedom load cell. The acquired data, in conjunction with a 
+                        biomechanical model, indicate the extent to which the participant flexes about the testing elbow and abducts about the shoulder.  In addition, the system 
+                        quantifies muscle activity  using eight surface electromyography (sEMG) electrodes (sEMG1: biceps, sEMG2: triceps lateral, sEMG3: anterior deltoid, sEMG4: 
+                        medial deltoid, sEMG5: posterior deltoid, sEMG6: pectoralis major, sEMG7: lower trapezius, and sEMG8: middle trapezius). The sEMG signals indicate the 
+                        electrical activity within each of the eight testing muscles. A DAQ card acquires data from these sensors, and a Matlab program streams the data. Data 
+                        is collected at 1kHz.
+                    </p>                   
                     <P></P>
-                    <p>The system acquires torque data through the torque sensor as well as the EMG signal through 8 surface EMG electrodes. The torque data indicates the extent to which the participant is flexing about the testing elbow joint. 
-                        The EMG signal indicates the electical activity within each of the 8 testing muscles. We used a DAQ card for data acquisition. A Matlab program streams the sensory data and convert the voltage signal
-                        to the actual torque generated by the participant. A python program processes the collected data and use matrix factorization algorithm to find the synergies behind the EMG data  </p>
-                    <img class="img-fluid d-block mx-auto" src="img/portfolio/muscle_proj/EMG.png" alt="">
-                    <h5>Participants and Conditions</h5>
+                    <img class="img-fluid d-block mx-auto" src="img/portfolio/muscle_proj/EMG.png" alt="">                   
+                    <p></p>
+                    <p>Figure 4</p>    
+                    <p></p>
+                    <h5>Participants</h5>
                     <P></P>
-                    <h6>Participants</h6>
-                    <img class="img-fluid" src="img/portfolio/muscle_proj/participants.png" alt="" width="2000" height="1000">
-                    <P>One male and three female participants with no hemiparetic stroke were tested. They were all right-hand dominant, and with a mean ± standard deviation age of 26 ± 3 (range: 22-29) </P>
-                    <h6>Conditions</h6>
-                    <img class="img-fluid" src="img/portfolio/muscle_proj/conditions.png" alt="" width="400" height="300">
-                    <p>The participant was asked to pull in using 2 different shoulder abduction loads (10% and 50% of the maximum shoulder abduction torque)</p>
-                    <h5>Experiment Procedure</h5>
-                    <img class="img-fluid" src="img/portfolio/muscle_proj/setup.png" alt="" width="2000" height="1000">
-                    <p>The participant was requested to not exercise the day before and of testing to avoid muscle fatigue. At the beginning of the testing session, the participant sat with their torso and waist strapped to the Biodex chair. 
-                        The participant's testing arm was affixed to an isometric measurement device at 85° shoulder abduction, 40° shoulder flexion, and 90° elbow flexion.</p>
-                    <img class="img-fluid" src="img/portfolio/muscle_proj/emg-setup.png" alt="" width="1000" height="500">
-                    <p>8 electrode were placed on the surface of the person’s skin in order to record the muscle activities.</p>
+                    <P>Data were collected from one male and three female participants. Participants were all right-hand dominant, and their mean ± standard deviation age was 26 ± 3 (range: 22-29)
+                    </P>
+                    <h5>Experimental Procedures</h5>
+                    <img class="img-fluid" src="img/portfolio/muscle_proj/setup.png" alt="" width="3000" height="1000">
+                    <P>Figure 5</P>
+                    <p></p>
+                    <p>The participant was requested to not exercise the day before and of testing to avoid muscle fatigue. At the beginning of the testing session, the participant 
+                        sat with their torso and waist strapped to the Biodex chair. The participant's testing arm was affixed to an isometric measurement device at 85° shoulder 
+                        abduction, 40° shoulder flexion, and 90° elbow flexion. 
+                    </p>
+                    <h6>Baseline Task</h6>
+                    <p>This task was completed when the participant was relaxing without generating any torques with their right arm.
+                    </p>
+                    <p></p>
+                    <h6>Maximum Voluntary Torque Generation Task</h6>
+                    <p>The participant was asked to maximally activate each of the eight muscles and the maximum sEMG data was obtained for each respective muscle.
+                    </p>
+                    <p></p>
+                    <h6>Isometric Torque Generation Task</h6>
+                    <p>The participant was asked to flex about their elbow to 25% of their maximum voluntary torque in elbow flexion. This task was completed when abducting to two different shoulder abduction loads: 10% and 50% of their maximum voluntary torque in shoulder abduction. When the participant achieved desired shoulder abduction and elbow flexion torques, they were asked to maintain the desired torque for two seconds. For each shoulder abduction load, the participant performed 10 trials. During the two-second hold period, we extracted 0.5s of data for subsequent data analyses. 
+                    </p>
+                    <p></p>
                     <h6>Demo</h6>
                     <iframe width="560" height="315" src="https://www.youtube.com/embed/x7HlRIp5OJ0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     <p></p>
+
                     <h4>Data Analysis</h4>
                     <P></P>
-                    <h5>Muscle Synergy</h5>
-                    <img class="img-fluid" src="img/portfolio/muscle_proj/intuition.png" alt="" width="1000" height="500">
-                    <p>In order to condense the information and use less amount of muscle groups to explain all of the emgs, the idea of motor synergy was taken to find the muscle synergies. The goal here is to find the coordinated recruitment of groups of muscles with specific activation balances</p>
-                    <h5>Hypothesis</h5>
-                    <img class="img-fluid" src="img/portfolio/muscle_proj/hypothesis.png" alt="" width="1000" height="500">
-                    <p>The anticipated result is that there should be one synergy reinforces the elbow flexing and one reinforces the shoulder abduction.
-                        Since bicep is the main muscle for elbow flexing and the anterior deltoid is the main muscle for shoulder abduction, the hypothesis is made that the bicep is the 
-                    main muscle for one synergy group and the anterior deltoid is the main muscle for another synergy group </p>
+                    <h5>sEMG Preprocessing</h5>
                     <p></p>
-                    <h5>Methods</h5>
+                    <p>Baseline sEMGs were first obtained when the participant was relaxing without generating any torques with their right arm. To remove baseline voltage drift, first the mean baseline sEMG signal for each sEMG channel was identified from the data acquired in the baseline task. Following, this mean baseline sEMG signal was subtracted from the corresponding channel’s sEMG data acquired throughout each isometric torque generation trial. Next, the sEMG signals were rectified and averaged over a 0.5 seconds interval. Then, EMG data were normalized to the maximum to ensure that subsequent synergy extraction from preprocessed EMGs was not biased towards muscles with higher output. EMG data for each trial were stored in eight-column matrices and then were concatenated across the twenty trials.
+                    </p>
                     <p></p>
-                    <img class="img-fluid" src="img/portfolio/muscle_proj/intuition-algo.png" alt="" width="1000" height="500">
-                    The unsupervised learning method —— Nonnegative matrix factorization algorithm (NMF) is taken to find the muscle synergies that explains the 8 muscle activations. The squared residual and VAF measurements are taken to estimate the
-                    minimum number of muscle synergies, and cross-validation approach is used to help deriving a more accurate estimation.
+                    <h5>Muscle Synergy Identification</h5>
                     <p></p>
-                    <h6>EMG Preprocessing</h6>
-                    <p>EMGs were processed to remove baseline voltage drift, rectified, 
-                        and then averaged over the 0.5-s target matching interval. Mean baseline EMGs (recorded while subjects
-                        sat with their arm affixed to an isometric device without force generation) were subtracted from the averaged data. As a result, EMG data for each trial were vectors whose dimension was 8 (the number of
-                        muscles recorded) and these data reflected the increase in muscle activity corresponding to active force
-                        production. Before synergy extraction, EMG data recorded from each muscle were concatenated across
-                        trials relevant to the purpose of the synergy extraction and normalized by dividing each of the EMG channel by its maximum to have unit variance. This
-                        normalization procedure ensured that subsequent synergy extraction from preprocessed EMGs was not
-                        biased towards high-variance muscles.</p>
-                    <p></p>
-                    <h6>Identification of Muscle Synergies —— NMF Algorithm</h6>
-                    <p></p>
-                    <img class="img-fluid" src="img/portfolio/muscle_proj/NMF.png" alt="" width="1000" height="500">
-                    <p></p>
-                    <h6>Estimate the number of muscle synergies (k)</h6>
-                    <p></p>
-                    <img class="img-fluid" src="img/portfolio/muscle_proj/vaf.png" alt="" width="1000" height="500">
-                    <h6>Algorithm</h6>
-                    <p></p>
-                    <img class="img-fluid" src="img/portfolio/muscle_proj/algo.png" alt="" width="1000" height="500">
-                    <p></p>
+                    <img class="img-fluid" src="img/portfolio/muscle_proj/algo.png" alt="" width="500" height="300">
+                    <p>Figure 6</p>
+                    <p>A custom python program identifies the underlying muscle synergies that explain the patterns observed in the eight activated muscles during the 
+                        isometric torque generation task. The program was designed to process the collected sEMG data and apply a matrix factorization algorithm to 
+                        decompose the EMG signals. The unsupervised learning method we employed was nonnegative matrix factorization(NMF), an approach that has been 
+                        previously used in literature (Lee and Seung 1999). 
+                        The sEMG data we collected was split into a training set and a testing set by randomly holding out 20% of the data as testing data and leaving 
+                        80% as training data.We used mean square error (MSE) to evaluate the error in the training set and testing set during each NMF update iteration. 
+                        MSE was calculated as the squared residual: MSE =| sEMG -W·S |&sup2. where sEMG was a 20 (number of trials) by 8 matrix containing the 8 EMGs (of unit magnitude) in each row and W was a 20 by K (number of 
+                        synergies) matrix, with each row containing the synergy activation coefficients for a specific trial. S was a K by 8 matrix, with each 
+                        row containing the synergy activation strength for each of the 8 muscles.
+                    </p>        
+                    <p>A goal in our approach was to prevent overfitting the data, as well as ensuring the selection of the minimum number of muscle synergies that can explain the observed muscle activation patterns. Therefore, we included the following procedures. We first evaluated how the derived muscle synergies can explain the observed pattern by using the variance accounted for (VAF). VAF is defined as:
+                    VAF = 100 * (1- SSE / SST). where SSE was the sum of the squared residuals and SST was the sum of the squared EMG data. This approach requires that adding another synergy increases the mean global VAF by at least 3% (Jinsook 2013). 
+                    </P>
                     <h4>Results</h4>
                     <p></p>
-                    <h5>MSE Box Plot</h5>
+                    <h5>Number of Muscle Synergies Selected </h5>
+                    <P></P>
                     <img class="img-fluid" src="img/portfolio/muscle_proj/mse.png" alt="" width="500" height="400">
-                    <p>The training error and testing error were plotted out based on the collected data. The box plot shows a clear trend in training error, where the mean square error of the training set decreases
-                    as the number of muscle synergy increases. But there isn't the same trend in the testing set, since the mean and standard deviation of the testing error for each number of muscle synergy doesn't have much difference among each other. Thus, the mean square error is not sufficient
-                    to estimate the minimum number of muscle synergies. Thus the VAF measurement is used to help estimate the number of muscle synergies <p>
-                    <p></p>
-                    <h5>MSE and VAF measurement results </h5>
-                    <p></p>
+                    <P>Figure 7</P>
+                    <p>The training error and testing error were plotted based on the collected data. As the number of muscle synergy increases, 
+                        the mean squared error of the training set decreases. Therefore, the synergies selected seemingly better explained the data 
+                        with an increased number of muscle synergies. However, it is possible that the reduced mean square error of the training set 
+                        is due to overfitting of the data in the training set. As such, we needed to determine whether the same trends occurred in the
+                         testing set.
+                    <p>
+                    <p>The mean squared error of the testing set error based on the two, three, and four muscle synergies, respectively, that were extracted in the training set,  were similar. As such, this points to the decrease in the mean squared error in the training set arising due to an overfitting of the training set data. This overfitting indicates that MSE is not an effective measure to evaluate the outcome of the NMF algorithm. 
+                    </p>
                     <img class="img-fluid" src="img/portfolio/muscle_proj/VAF.png" alt="" width="700" height="300">
+                    <p>Table 1</p>
+                    <p>Previous studies (Jinsook 2012) identifying muscle synergies used VAF to judge the performance of the sEMG signals decomposition. 
+                        Therefore, we adopted this approach of using VAF to estimate the number of muscle synergies. Table 1 outlines the VAF obtained for 
+                        the two motor tasks tested in this study.  Our requirement was that  the addition of another synergy increases the mean global VAF 
+                        by at least 3%. Hence, the number of muscle synergies selected for the 10% shoulder abduction load task was four and for the 50% 
+                        shoulder abduction load task was two.
+                    </p>
+                    <h5>Muscle Activation Patterns </h5>
                     <p></p>
-                    <p>According to the requirement that adding another synergy increased the mean global VAF < 3%, the number of muscle synergy for the 10% shoulder abduction load task was chosen to be 4 and that for the 50% shoulder abduction load task was chosen to be 2</p>
-                    <h5>Normalized Muscle synergy when shoulder abduction load is 10% (# synergies = 4)</h5>
+                    <h6>Normalized Muscle synergy when shoulder abduction load is 10% MVT Shoulder abduction
+                    </h6>
                     <p></p>
                     <img class="img-fluid" src="img/portfolio/muscle_proj/10.png" alt="" width="1000" height="700">
+                    <p>Figure 8</p>
                     <p></p>
-                    <p>As shows in the picture, synergy group 1 and 3 have strong bicep component as well as lower trapezius component, and synergy group 2 and 4 have no bicep component and weak lower trapezius component. This four-synergy-group result didn't align with the initial hypothesis that one group should reinforce the elbow flexing and one should reinforce the shoulder abduction. Synergy group 1 and 3 explain the elbow flexing and shoulder abduction movement together, 
-                        and synergy group 2 and 4 could be the additional synergy groups that consist of noise due to low shoulder abduction load</p>
-                    <p></p>
-                    <h5>Normalized Muscle synergy when shoulder abduction load is 50% (# synergies = 2)</h5>
+                    <p>There are four muscle synergies decomposed from the sEMG signals collected during the motor task when participants flexed 
+                        about their elbow to 25% maximum voluntary elbow flexion and abducted about their shoulder to 10% maximum voluntary shoulder 
+                        abduction. As shown in the picture, synergy group 2 has strong involvement of the anterior deltoid and middle trapezius muscles 
+                        which are responsible for shoulder abduction. Synergy group 4 primarily consists of the triceps brachii muscle, which was not 
+                        expected. A rationale for why the triceps were activated is to stabilize the arm by increasing its stiffness. Synergy group 1 
+                        has strong biceps and lower trapezius components, suggesting that the lower trapezius may have coactivated during elbow flexion. 
+                        Synergy group 3 has strong involvement of the pectoralis major and lower trapezius muscles. These muscles play a role in stabilizing 
+                        the shoulder joint. As a result, the muscle activation patterns during this task demonstrates that elbow flexors, shoulder abductors, 
+                        and their respective antagonists are recruited in synergistic groups.
+                    </p>
+                    <h6>Normalized Muscle synergy when shoulder abduction load is 50% MVT Shoulder abduction</h6>
                     <p></p>
                     <img class="img-fluid" src="img/portfolio/muscle_proj/50.png" alt="" width="700" height="300">
+                    <p>Figure 9</p>
                     <p></p>
-                    <p>As shows in the picture, synergy group 1 has strong bicep component as well as lower trapezius component, and synergy group 2 has weak bicep component and some lower trapezius component. This two-synergy-group result didn't fully align with the initial hypothesis that one group should reinforce the elbow flexing and one should reinforce the shoulder abduction, but it's better than the previous four-synergy-group result in
-                        sense that the synergy group 1 can mainly explain the elbow flexion and synergy group 2 can mainly explain the shoulder abduction. </p>
-            
-                    <p></p>
+                    <p>There are two muscle synergies decomposed from the sEMG signals collected during the motor task when participants flexed about their 
+                        elbow to 25% maximum voluntary elbow flexion and abducted about their shoulder to 50% maximum voluntary shoulder abduction. As shown 
+                        in the picture, synergy group 1 has a strong biceps component, as well as lower trapezius component, and synergy group 2 has a weak 
+                        biceps component and a lower trapezius component. This two-synergy-group result didn't fully align with the initial hypothesis, but 
+                        still showed that synergy group 1 mainly explains the elbow flexion and synergy group 2 mainly explains the shoulder abduction.
+                    </p>
+                   <h5>Comparison of muscle activation patterns between the two tasks
+                </h5>
+                <p></p>
+                    <p>Results of our NMF algorithm demonstrated that four muscle synergies are necessary for reconstructing sEMG signals during the task with a small shoulder abduction load (10% MVT), while only two are needed for the task with a large shoulder abduction load (50% MVT). This result can be supported by the principles underlying muscle recruitment. A motor task requiring high effort and large torque output often involves a gross activation of multiple muscles at once. On the other hand, for a task requiring less net torque output, it is often necessary to use antagonistic muscles to stabilize and maintain the torque output within the desired range. 
+                    </p>
+                    <h4>Reference</h4>
+                    <p><in>[1] Lee DD and Seung HS. Learning the parts of objects by non-negative matrix factorization. Nature 401: 788 –791, 1999.
+                    </in></p>
+                    <p><in>[2] Jinsook Roh, William Z. Rymer, Eric J. Perreault, Seng Bum Yoo, and Randall F. Beer. Alterations in upper limb muscle synergy structure in chronic stroke
+                        survivors. J Neurophysiol. 2013 Feb 1; 109(3): 768–781.</in></p>
                     <ul class="list-inline">
                     <p class="item-intro text-muted"> <a class="boxed" href="https://github.com/mushenghe/muscle_synergy_torque_accuracy"><font color="red"><b>Current Status and Source code here</b></font></a></p>
                       <li>Date: December 2019</li>
