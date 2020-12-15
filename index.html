@@ -508,28 +508,14 @@
                   	<p>We live in an era in which communication seems simpler than any times, a friend is only one text away or one video chat away. Although communication may be easier and faster, people still feel lonely and depression rates have largely increased. Inspired by this circumstance, this project is to design a system that would enable the Baxter Robot to detect the negative emotion of its master and play songs on the piano using both hands to help him/her get rid of the bad feelings.</p>
                     <p></p>
                     <h4>Emotion Detection</h4>
-                    <h5>1. Data Pre-processing</h5> 
-                    <p>The datasets are composed of 35887
-                      training and testing samples. The training
-                      samples are then divided into two sets namely;
-                      Training Set and Validation Set. Training set
-                      samples composed of 80% of the original dataset
-                      samples and 20% of the samples are specified for
-                      validation. Hence Training Set and Validation Set
-                      will be 22966 and 5741 respectively.
-                      Preprocessing is performed to prepare images for
-                      the feature extraction stage. A set of facial feature
-                      points is extracted from the images then facial
-                      features derived from these points. Different sets
-                      of facial features are used for both training and
-                      validation classifiers.</p>
+                    <h5>1. Data Description</h5> 
+                    <p>The data consists of 48x48 pixel grayscale images of faces. The faces have been automatically registered so that the face is more or less centered and occupies about the same amount of space in each image. The datasets are composed of 28,709 training examples
+                        and 3,589 testing examples. The training samples are then divided into two sets namely; Training Set and Validation Set. Training set samples composed of 80% of the original dataset samples and 20% of the samples are specified for validation. </p>
                     <img class="img-fluid d-block mx-auto" src="img/portfolio/healer_baxter/data.png" alt="">
                     <p></p>
                     <h5>2. Data Augmentationg</h5> 
                     <p>In order to avoid overfitting and improve
-                      recognition accuracy I applied data
-                      augmentation techniques on each training samples. For each image I performed
-                      following transforms:
+                      recognition accuracy, the following transforms are perfomed on each image:
                       a. Rescale (1. / 255)
                       B. Rotation (30)
                       b. Shear (0.3)
@@ -538,15 +524,10 @@
                       e. Flip (horizontal)</p>
                     <p></p>
                     <h5>3. Proposed CNN Model</h5>       
-                  	<p>The CNN Model I built takes the input grayscale image size of 48*48 pixels. This model architecture is composed of 5 layers. These layers
-                      contains 5 convolutional layers and 5 max pooling layers along with 2 fully connected layer and the output layer. The
+                  	<p>The CNN Model I built takes a 48*48 pixels grayscale image as input. This model is composed of 5 convolutional layers, each followed with a max pooling layer, and 2 fully connected layers. I
+                        classified images through softmax activation function at the last layer (output layer). The
                       output layer consists of 5 neurons corresponding to 5
-                      emotional labels: Angry, Happy, Neutral, Sad and Surprise. This model uses Rectified Linear Unit (relu) as most precisely used
-                      activation function which is applied on all the Convolution
-                      Layer and Dense Layer except the last layer (output layer)
-                      which is actually Softmax Function. Dropout Layer is also
-                      applied after each Convolution, Max Pooling and Dense
-                      Layer with the rate of 0.25</p>
+                      emotional labels: Angry, Happy, Neutral, Sad and Surprise. </p>
                     <p></p>
                     <img class="img-fluid d-block mx-auto" src="img/portfolio/healer_baxter/CNN_ARC.png" alt="">
                     <p></p>
